@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+    color: #AAAAAA;
+    font-family: 'DDINExpRegular';
+    font-weight: 700;
+    font-style: normal;
+    transition: 0.3s;
+}
+
+img {
+    transition: 0.3s;
+}
+
+p:hover, img:hover {
+    transition: 0.3s;
+}

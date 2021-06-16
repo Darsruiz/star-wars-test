@@ -8,8 +8,23 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      outline: {
+        'solid-aaa': '1px solid #444444',
+      },
+      backgroundImage: theme => ({
+        'titlebar': "url('src/assets/navigation.jpg')",
+        'background': "url('src/assets/background.jpeg')"
+      }),
+    },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    extend: {
+      filter: ['hover'],
+      brightness: ['hover', 'focus'],
+    }
+  },
+  plugins: [
+    require('tailwindcss-css-filters'),
+  ],
 }
