@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserData } from '../user-data';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  LoggedIn = false
-  data: any
+  LoggedIn = this.util.LoggedIn
+  users: UserData[] = [];
 
-  constructor() { }
+  constructor(private util: LoginService) { }
 
   ngOnInit(): void {
   }
 
-  onClickSubmit(data: any) {
-    alert("Entered Email id : " + data.username + data.password + data.email);
- }
+  onSubmit(data: UserData) {
+    this.util.onSubmit(data)
+  }
 
+  onLogin(data: UserData) {
+    this.util.onLogin(data)
+    this.LoggedIn = this.util.LoggedIn
+  }
 }
