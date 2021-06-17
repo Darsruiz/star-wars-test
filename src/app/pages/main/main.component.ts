@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from 'src/app/services/api.service';
+import { LoginService } from 'src/app/services/login.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,9 +11,10 @@ export class MainComponent implements OnInit {
   ships: any;
   shipsArray: any
   ownedShips: any;
-  money: number = 0;
+  money: number = this.util.money;
+  LoggedIn = this.util.LoggedIn
 
-  constructor(private service: APIService) { }
+  constructor(private service: APIService, private util:LoginService) { }
 
   ngOnInit() {
     this.service.getShips()

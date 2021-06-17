@@ -8,6 +8,7 @@ export class LoginService {
 
   LoggedIn = false;
   users: UserData[] = [];
+  money: number = 500000
 
   constructor() { }
 
