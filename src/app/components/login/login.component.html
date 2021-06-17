@@ -1,1 +1,98 @@
-<p>login works!</p>
+
+<section class="overflow-hidden text-gray-700 ">
+    <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+        <div class="flex flex-wrap -m-1 md:-m-2">
+            <div class="flex flex-wrap mx-auto mb-96" *ngIf="LoggedIn">
+                <div class="w-full p-1 md:p-2">
+                    <div class="bg-black border-2 border-gray-700 rounded-lg">
+                        <h4 class="mt-3 mb-6 text-xl font-medium text-center text-white">Logged In!</h4>
+                        <h5 class="mx-5 mb-2 text-center text-gray-400 text-m">Now You can navigate anywhere you want</h5>
+
+                        <p class="mx-5 mb-5 leading-relaxed text-center">This is a technical test. I hope you like it!</p>
+
+                        <div class="flex w-auto mb-3 justify-evenly">
+                            <button [routerLink]="['/main']"
+                                class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow-md outline-none"
+                                type="button">
+                                Go Home
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap mx-auto mb-96" *ngIf="!LoggedIn">
+                <div class="w-full p-1 md:p-2">
+                    <div class="bg-black border-2 border-gray-700 rounded-lg">
+                        <h4 class="mt-3 mb-6 text-xl font-medium text-center text-white">Not Logged In</h4>
+                        <h5 class="mx-5 mb-2 text-center text-gray-400 text-m">Login or Register to Continue</h5>
+
+                        <p class="mx-5 mb-5 leading-relaxed text-center">This is a technical test. I hope you like it!</p>
+
+                        <div class="pt-0 mx-32 mb-6">
+                            <input type="text" placeholder="Username"
+                              class="relative w-full px-2 py-1 text-sm text-center text-gray-600 placeholder-gray-400 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring" />
+                          </div>
+
+                          <div class="pt-0 mx-32 mb-3">
+                            <input type="password" placeholder="Password"
+                              class="relative w-full px-2 py-1 text-sm text-center text-gray-600 placeholder-gray-400 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring" />
+                          </div>
+                          
+                        <div class="flex w-auto mb-3 justify-evenly">
+                            <button
+                                class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow-md outline-none"
+                                type="button">
+                                Sign In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full p-1 md:p-2">
+                    <div class="bg-black border-2 border-gray-700 rounded-lg">
+                        <h4 class="mt-3 mb-6 text-xl font-medium text-center text-white">Not Logged In</h4>
+                        
+
+
+                        <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+                            <div class="pt-0 mx-32 mb-6">
+                                <input type="text" name="username" placeholder="Username" ngModel
+                                  class="relative w-full px-2 py-1 text-sm text-center text-gray-600 placeholder-gray-400 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring" />
+                              </div>
+    
+                              <div class="pt-0 mx-32 mb-6">
+                                <input type="password" name="password" placeholder="Password" ngModel
+                                  class="relative w-full px-2 py-1 text-sm text-center text-gray-600 placeholder-gray-400 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring" />
+                              </div>
+    
+                              <div class="pt-0 mx-32 mb-3">
+                                <input type="text" name="email" placeholder="Email" ngModel
+                                  class="relative w-full px-2 py-1 text-sm text-center text-gray-600 placeholder-gray-400 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring" />
+                              </div>
+
+                              <div class="flex w-auto mb-3 justify-evenly">
+                                <input
+                                class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-gray-900 rounded shadow-md outline-none"
+                                type="submit"  value="Sign Up">
+                            
+                            </div>
+                              
+                                
+                            
+                        </form>
+                        
+
+                          
+                            
+            
+                          
+                          
+                        
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  LoggedIn = false
+  data: any
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  onClickSubmit(data: any) {
+    alert("Entered Email id : " + data.username + data.password + data.email);
+ }
 
 }
