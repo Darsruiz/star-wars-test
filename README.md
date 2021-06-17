@@ -1,6 +1,6 @@
 # Star Wars
 
-This is a technical test of Star Wars it's meant to:
+This is a technical test of Star Wars, it's meant to:
 
 * Show list of Ships
 * Have a working login page
