@@ -4,15 +4,10 @@ import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'main',
     component: MainComponent,
     pathMatch: 'full',
-  },
-  {
-    path: 'home',
-    component: MainComponent,
-    pathMatch: 'full',
-  },
+  }
 ];
 
 @NgModule({
