@@ -5,6 +5,11 @@ import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: MainComponent,
+    pathMatch: 'full',
+  },
+  {
     path: 'main',
     component: MainComponent,
     pathMatch: 'full',
