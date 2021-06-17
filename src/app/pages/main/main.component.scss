@@ -1,0 +1,12 @@
+button:focus {
+    @apply outline-none;
+}
+
+button:hover{
+    @apply uppercase;
+    @apply bg-red-600;
+}
+
+button:active {
+    @apply bg-red-900;
+}
