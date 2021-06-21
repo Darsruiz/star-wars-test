@@ -1,16 +1,14 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class APIService implements OnInit {
+export class APIService {
 
   private url: string = "https://swapi.dev/api/starships/?page=1&format=json"
 
   constructor(private httpClient: HttpClient) { }
-
-  ngOnInit() {}
 
   getShips(){
     return this.httpClient.get(this.url);
